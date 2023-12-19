@@ -1,20 +1,20 @@
 <form [formGroup]="addChildForm" (ngSubmit)="onSubmit()">
     <h2>Ihr Kind anmelden!</h2>
-
+    <br/>
     <mat-form-field appearance="fill" floatLabel="always">
-        <mat-label>Name des Kindes</mat-label>
+        <mat-label>Name</mat-label>
         <input matInput placeholder="Name" formControlName="name">
         <mat-error *ngIf="addChildForm.get('name').hasError('required')">darf nicht leer!</mat-error>
       </mat-form-field>
-    
+      <br/>
       <mat-form-field appearance="fill">
-        <mat-label>Geburtsdatum des Kindes</mat-label>
+        <mat-label>Geburtsdatum</mat-label>
         <input matInput type="date" placeholder="Geburtsdatum" formControlName="birthDate">
         <mat-error *ngIf="addChildForm.get('birthDate').hasError('required')">darf nicht leer!</mat-error>
       </mat-form-field>
-      
+      <br/>
       <mat-form-field appearance="fill">
-          <mat-label>Kindergartenwunsch</mat-label>
+          <mat-label>Kindergarten</mat-label>
           <mat-select formControlName="kindergardenId">
             <mat-option value="" disabled>Bitte auswählen</mat-option>
             <mat-option *ngFor="let kindergarden of storeService.kindergardens" [value]="kindergarden.id">
@@ -23,6 +23,6 @@
           </mat-select>
           <mat-error *ngIf="addChildForm.get('kindergardenId').hasError('required')">darf nicht leer!</mat-error>
         </mat-form-field>
-        
-      <button mat-raised-button type="submit">Abschicken</button>
+        <br/>
+      <button mat-raised-button type="submit">Erfassen</button>
 </form>

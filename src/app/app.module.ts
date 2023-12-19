@@ -10,12 +10,14 @@ import { AddDataComponent } from './dashboard/add-data/add-data.component';
 import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './dashboard/button/button.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -35,6 +37,7 @@ import {MatTableModule} from '@angular/material/table';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatCardModule,
     FormsModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
@@ -46,7 +49,8 @@ import {MatTableModule} from '@angular/material/table';
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
